@@ -21,7 +21,10 @@ class FileStorage:
     FileStorage class for storing, serializing and deserializing data
     """
 
-    """class private varaibles"""
+    """
+    class private varaibles
+    """
+
     __objects: dict = {}
     __file_path: str = 'file.json'
     models = (
