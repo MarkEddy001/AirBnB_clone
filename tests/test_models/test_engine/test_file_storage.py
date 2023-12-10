@@ -1,9 +1,11 @@
 #!/usr/bin/python3
-"""Unittest module for the FileStorage class.
+"""
+Unittest module for the FileStorage class.
 Unittest classes:
     TestFileStorage_instantiation
     TestFileStorage_methods
 """
+
 import os
 import json
 import models
@@ -21,7 +23,7 @@ from models.review import Review
 
 class TestFileStorage_instantiation(unittest.TestCase):
     """
-    Unit tests to verify the correct instantiation 
+    Unit tests to verify the correct instantiation
     of the FileStorage class.
     """
 
@@ -44,7 +46,7 @@ class TestFileStorage_instantiation(unittest.TestCase):
 
 class TestFileStorage_methods(unittest.TestCase):
     """
-    Unit tests for testing methods of the 
+    Unit tests for testing methods of the
     FileStorage class.
     """
 

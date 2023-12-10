@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Unit tests for the State class in models/state.py.
+"""
+Unit tests for the State class in models/state.py.
 
 Unittest classes:
     TestState_instantiation
@@ -16,7 +17,7 @@ from models.state import State
 
 class TestState_instantiation(unittest.TestCase):
     """
-    Unittests for testing instantiation 
+    Unittests for testing instantiation
     of the State class.
     """
 
@@ -89,7 +90,7 @@ class TestState_instantiation(unittest.TestCase):
 
 class TestState_save(unittest.TestCase):
     """
-    Unit tests for the save method of 
+    Unit tests for the save method of
     the State class.
     """
 
@@ -143,7 +144,7 @@ class TestState_save(unittest.TestCase):
 
 class TestState_to_dict(unittest.TestCase):
     """
-    Unittests for testing to_dict 
+    Unittests for testing to_dict
     method of the State class.
     """
 
