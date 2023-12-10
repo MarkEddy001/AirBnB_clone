@@ -1,13 +1,14 @@
 #!/usr/bin/python3
-""" A module that contains the City class that
-
+"""
+A module that contains the City class that
 defines all  attributes/methods for a City object
 """
 
 from models.base_model import BaseModel
 
 class Place(BaseModel):
-    """Definition of a Place.
+    """
+    Definition of a Place.
 
     Public class attributes:
     ------------------------

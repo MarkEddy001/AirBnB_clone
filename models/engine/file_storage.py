@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-""" This Model will be used for serialization-deserialization
-    purposes of BaseModel objects and all of its subclasses
+"""
+This Model will be used for serialization-deserialization
+purposes of BaseModel objects and all of its subclasses
 """
 
 import json
@@ -38,16 +39,22 @@ class FileStorage:
         pass
 
     def all(self):
-        """Return all instances stored"""
+        """
+        Return all instances stored
+        """
         return FileStorage.__objects
 
     def new(self, obj):
-        """Stores a new Object"""
+        """
+        Stores a new Object
+        """
         key = "{}.{}".format(type(obj).__name__, obj.id)
         FileStorage.__objects[key] = obj
 
     def save(self):
-        """serializes objects stored and persist in file"""
+        """
+        serializes objects stored and persist in file
+        """
         serialized = {
             key: val.to_dict()
             for key, val in self.__objects.items()
@@ -56,7 +63,9 @@ class FileStorage:
             f.write(json.dumps(serialized))
 
     def reload(self):
-        """de-serialize persisted objects"""
+        """
+        de-serialize persisted objects
+        """
         try:
             deserialized = {}
             with open(FileStorage.__file_path, "r") as f:
@@ -70,7 +79,9 @@ class FileStorage:
             pass
 
     def find_by_id(self, model, obj_id):
-        """Find and return an elemt of model by its id"""
+        """
+        Find and return an elemt of model by its id
+        """
         F = FileStorage
         if model not in F.models:
             # Invalid Model Name
@@ -86,7 +97,9 @@ class FileStorage:
         return F.__objects[key]
 
     def delete_by_id(self, model, obj_id):
-        """Find and return an elemt of model by its id"""
+        """
+        Find and return an elemt of model by its id
+        """
         F = FileStorage
         if model not in F.models:
             raise ModelNotFoundError(model)
@@ -99,7 +112,9 @@ class FileStorage:
         self.save()
 
     def find_all(self, model=""):
-        """Find all instances or instances of model"""
+        """
+        Find all instances or instances of model
+        """
         if model and model not in FileStorage.models:
             raise ModelNotFoundError(model)
         results = []
@@ -109,7 +124,9 @@ class FileStorage:
         return results
 
     def update_one(self, model, iid, field, value):
-        """Updates an instance"""
+        """
+        Updates an instance
+        """
         F = FileStorage
         if model not in F.models:
             raise ModelNotFoundError(model)
