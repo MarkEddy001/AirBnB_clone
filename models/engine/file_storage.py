@@ -15,9 +15,10 @@ from models.review import Review
 
 
 class FileStorage:
-"""
-A class that manages storage of hbnb models in JSON format.
-"""
+    """
+    A class that manages storage of hbnb models in JSON format.
+    """
+
     __file_path = "file.json"
     __objects = {}
 
