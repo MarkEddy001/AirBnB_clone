@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-Defines the FileStorage class.
+This module defines the FileStorage class to manage JSON serialization
+and deserialization of instances.
 """
 
 import json
@@ -14,15 +15,21 @@ from models.review import Review
 
 
 class FileStorage:
-    """
-    Represent an abstracted storage engine.
-
-    Attributes:
-        __file_path (str): The name of the file to save objects to.
-        __objects (dict): A dictionary of instantiated objects.
-    """
+"""
+A class that manages storage of hbnb models in JSON format.
+"""
     __file_path = "file.json"
     __objects = {}
+
+    classes = {
+        'BaseModel': BaseModel,
+        'User': User,
+        'Place': Place,
+        'State': State,
+        'City': City,
+        'Amenity': Amenity,
+        'Review': Review
+    }
 
     def all(self):
         """
