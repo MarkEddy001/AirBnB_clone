@@ -17,14 +17,10 @@ from models.review import Review
 import re
 
 class HBNBCommand(cmd.Cmd):
-    """
-    Defines the HolbertonBnB command interpreter.
+    """ Class to represent the HBNB console. """
 
-    Attributes:
-        prompt (str): The command prompt.
-    """
+    prompt = '(hbnb) '
 
-    prompt = "(hbnb) "
     __classes = {
         "BaseModel",
         "User",
@@ -129,23 +125,22 @@ class HBNBCommand(cmd.Cmd):
             storage.save()
 
     def do_all(self, arg):
-         """
-         Usage: all or all <class> or <class>.all()
-         Display string representations of all instances of a given class.
-         If no class is specified, displays all instantiated objects.
-         """
-
-    argl = parse(arg)
-    if len(argl) > 0 and argl[0] not in HBNBCommand.__classes:
-        print("** class doesn't exist **")
-    else:
-        objl = []
-        for obj in storage.all().values():
-            if len(argl) > 0 and argl[0] == obj.__class__.__name__:
-                objl.append(obj.to_dict())
-            elif len(argl) == 0:
-                objl.append(obj.to_dict())
-        print([str(obj) for obj in objl])
+        """
+        Usage: all or all <class> or <class>.all()
+        Display string representations of all instances of a given class.
+        If no class is specified, displays all instantiated objects.
+        """
+        argl = parse(arg)
+        if len(argl) > 0 and argl[0] not in self.__classes:
+            print("** class doesn't exist **")
+        else:
+            objl = []
+            for obj in storage.all().values():
+                if len(argl) > 0 and argl[0] == obj.__class__.__name__:
+                    objl.append(obj.to_dict())
+                elif len(argl) == 0:
+                    objl.append(obj.to_dict())
+            print([str(obj) for obj in objl])
 
     def do_count(self, arg):
         """
@@ -167,38 +162,40 @@ class HBNBCommand(cmd.Cmd):
         Update a class instance of a given id by adding or updating
         a given attribute key/value pair or dictionary.
         """
-    argl = parse(arg)
-    objdict = storage.all()
-
-    if len(argl) == 0:
-        print("** class name missing **")
-        return False
-    if argl[0] not in HBNBCommand.__classes:
-        print("** class doesn't exist **")
-        return False
-    if len(argl) == 1:
-        print("** instance id missing **")
-        return False
-    if "{}.{}".format(argl[0], argl[1]) not in objdict.keys():
-        print("** no instance found **")
-        return False
-    if len(argl) == 2:
-        print("** attribute name missing **")
-        return False
-    if len(argl) == 3:
-        print("** value missing **")
-        return False
-
-    key = "{}.{}".format(argl[0], argl[1])
-    obj = objdict[key]
-
-    if len(argl) == 4:
-        setattr(obj, argl[2], eval(argl[3]))
-    elif type(eval(argl[2])) == dict:
-        for k, v in eval(argl[2]).items():
-            setattr(obj, k, eval(v))
-
-    obj.save()
+        argl = parse(arg)  # Ensure the `parse` function is defined elsewhere
+        objdict = storage.all()
+        if len(argl) == 0:
+            print("** class name missing **")
+            return False
+        if argl[0] not in self.__classes:
+            print("** class doesn't exist **")
+            return False
+        if len(argl) == 1:
+            print("** instance id missing **")
+            return False
+        if "{}.{}".format(argl[0], argl[1]) not in objdict:
+            print("** no instance found **")
+            return False
+        if len(argl) == 2:
+            print("** attribute name missing **")
+            return False
+        if len(argl) == 3:
+            print("** value missing **")
+            return False
+        key = "{}.{}".format(argl[0], argl[1])
+        obj = objdict[key]
+        if len(argl) == 4:
+            value = argl[3]
+            try:
+                value = json.loads(value)
+            except json.JSONDecodeError:
+                pass
+            setattr(obj, argl[2], value)
+        elif isinstance(json.loads(argl[2]), dict):
+            attribute_dict = json.loads(argl[2])
+            for k, v in attribute_dict.items():
+                setattr(obj, k, v)
+        obj.save()
 
 if __name__ == "__main__":
     HBNBCommand().cmdloop()
