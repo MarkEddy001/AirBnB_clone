@@ -129,11 +129,12 @@ class HBNBCommand(cmd.Cmd):
             storage.save()
 
     def do_all(self, arg):
-    """
-    Usage: all or all <class> or <class>.all()
-    Display string representations of all instances of a given class.
-    If no class is specified, displays all instantiated objects.
-    """
+         """
+         Usage: all or all <class> or <class>.all()
+         Display string representations of all instances of a given class.
+         If no class is specified, displays all instantiated objects.
+         """
+
     argl = parse(arg)
     if len(argl) > 0 and argl[0] not in HBNBCommand.__classes:
         print("** class doesn't exist **")
@@ -159,13 +160,13 @@ class HBNBCommand(cmd.Cmd):
         print(count)
 
     def do_update(self, arg):
-    """
-    Usage: update <class> <id> <attribute_name> <attribute_value> or
-           <class>.update(<id>, <attribute_name>, <attribute_value>) or
-           <class>.update(<id>, <dictionary>)
-    Update a class instance of a given id by adding or updating
-    a given attribute key/value pair or dictionary.
-    """
+        """
+        Usage: update <class> <id> <attribute_name> <attribute_value> or
+        <class>.update(<id>, <attribute_name>, <attribute_value>) or
+        <class>.update(<id>, <dictionary>)
+        Update a class instance of a given id by adding or updating
+        a given attribute key/value pair or dictionary.
+        """
     argl = parse(arg)
     objdict = storage.all()
 
