@@ -6,6 +6,7 @@ defines all  attributes/methods for a City object
 
 from models.base_model import BaseModel
 
+
 class Place(BaseModel):
     """
     Definition of a Place.

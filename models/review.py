@@ -6,6 +6,7 @@ defines all  attributes/methods for a Review object
 
 from models.base_model import BaseModel
 
+
 class Review(BaseModel):
     """
     Represent a review.
