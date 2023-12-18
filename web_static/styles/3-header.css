@@ -3,6 +3,7 @@ header {
     height: 70px;
     width: 100%;
     border-bottom: 1px solid #CCCCCC;
+<<<<<<< HEAD
     }
 #header_img {
 	height: 100%;
@@ -13,4 +14,15 @@ header {
 	background-position: center;
 
 	margin-left: 20px;
+=======
+    display: flex;
+    align-items: center;
+}
+
+header .logo {
+    width: 142px;
+    height: 60px;
+    background: url("../images/logo.png") no-repeat center;
+    padding-left: 20px;
+>>>>>>> refs/remotes/origin/master
 }
