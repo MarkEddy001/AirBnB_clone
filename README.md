@@ -1,6 +1,6 @@
 # AirBnB Clone - The Console
 
-# ![Optional Text](logo.png)
+![Optional Text](logo.png)
 
 ## Project Description
 
