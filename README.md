@@ -1,4 +1,4 @@
-![Optional Text](logo.png)
+![Optional Text](hbnb.png)
 
 # AirBnB Clone - The Console
 
