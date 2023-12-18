@@ -1,53 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
   <head>
-    <title>
-      AirBNB Clone
-    </title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3.0, minimum-scale=0.86">
-    <link rel="stylesheet" href="styles/4-common.css" >
-    <link rel="stylesheet" href="styles/3-header.css" >
-    <link rel="stylesheet" href="styles/3-footer.css" >
-    <link rel="stylesheet" href="styles/6-filters.css" >
-    <link rel="stylesheet" href="styles/101-places.css" >
-    <link rel="shortcut icon" href="../images/icon.png" type="image/x-icon" >
-    <link
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-      rel="stylesheet"
-      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
-      crossorigin="anonymous"
-     >
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/icon.png">
+    <link rel="stylesheet" href="styles/4-common.css">
+    <link rel="stylesheet" href="styles/3-header.css">
+    <link rel="stylesheet" href="styles/3-footer.css">
+    <link rel="stylesheet" href="styles/6-filters.css">
+    <link rel="stylesheet" href="styles/101-places.css">
+    <title>AirBnB clone</title>
   </head>
-
   <body>
-    <header></header>
+    <header>
+    </header>
     <div class="container">
       <section class="filters">
         <div class="locations">
           <h3>States</h3>
-          <h4>Addis Ababa,Hawassa...</h4>
+          <h4>California, Arizona...</h4>
           <ul class="popover">
-            <li>
-              <h2>Addis Ababa</h2>
+            <li><h2>Arizona:</h2>
               <ul>
-                <li>6 killo</li>
-                <li>kality</li>
-                <li>piyassa</li>
+                <li>Page</li>
+                <li>Page2</li>
               </ul>
             </li>
-            <li>
-              <h2>Hawassa</h2>
+            <li><h2>California:</h2>
               <ul>
-                <li>Atote</li>
-                <li>shell</li>
-                <li>Adisu Menahariya</li>
+                <li>San Francisco</li>
+                <li>Los Altos</li>
               </ul>
             </li>
-          </ul>
+            </ul>
         </div>
         <div class="amenities">
           <h3>Amenities</h3>
-          <h4>Internet,Tv,Kitchen...</h4>
+          <h4>Internet, Kitchen...</h4>
           <ul class="popover">
             <li>Internet</li>
             <li>Tv</li>
@@ -55,195 +44,141 @@
             <li>Iron</li>
           </ul>
         </div>
-        <button>
-          Search
-        </button>
-      </section>
+        <button type="button" name="button">Search</button>
+      </section> <!-- end fiter-->
+
       <section class="places">
         <h1>Places</h1>
-        <div class="boxes">
-          <article>
-            <h2>Home</h2>
-            <div class="price_by_night">
-              $80
-            </div>
-            <div class="information">
-              <div class="max_guest">
-                <div class="img1"></div>
-                <p>2 Guests</p>
-              </div>
-              <div class="number_rooms">
-                <div class="img2"></div>
-                <p>1 Bedroom</p>
-              </div>
-              <div class="number_bathrooms">
-                <div class="img3"></div>
-                <p>1 Bedroom</p>
-              </div>
-            </div>
-            <div class="user"><strong>Owner:</strong> Juanito</div>
-            <div class="description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae
-              reprehenderit reiciendis consequatur, accusamus quia accusantium
-              sequi tempore velit expedita impedit minima ea nemo perferendis
-              et, repellat cumque nulla quo optio.
-            </div>
-            <div class="amenities">
-              <h2>Amenities</h2>
-              <ul>
-                <li><i class="fa fa-tv"></i> TV</li>
-                <li><i class="fa fa-wifi"></i> Wifi</li>
-                <li><i class="fa fa-paw"></i> Pets friendly</li>
-              </ul>
-            </div>
-            <div class="reviews">
-              <h2>2 Reviews</h2>
-              <ul>
-                <li>
-                  <h3>From Bob Dylan the 27th January 2017</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Accusantium commodi cupiditate blanditiis repellat
-                    voluptatibus dicta quaerat eligendi nesciunt harum, quia hic
-                    doloremque neque maxime ratione ab architecto odit, tempora
-                    quos.
-                  </p>
-                </li>
-                <li>
-                  <h3>From Freddie Mercury the 31th october 1987</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Nihil voluptatibus inventore sed cupiditate est minima quia
-                    et fuga sint rerum commodi ea aut quis consequuntur, ab
-                    numquam maxime hic omnis?
-                  </p>
-                </li>
-              </ul>
-            </div>
-          </article>
-          <article>
-            <h2>Tiny House</h2>
-            <div class="price_by_night">
-              $65
-            </div>
-            <div class="information">
-              <div class="max_guest">
-                <div class="img1"></div>
-                <p>2 Guests</p>
-              </div>
-              <div class="number_rooms">
-                <div class="img2"></div>
-                <p>1 Bedroom</p>
-              </div>
-              <div class="number_bathrooms">
-                <div class="img3"></div>
-                <p>1 Bedroom</p>
-              </div>
-            </div>
-            <div class="user"><strong>Owner:</strong> Jeniffer</div>
-            <div class="description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
-              laudantium possimus, ad nihil minima sapiente veniam doloribus
-              distinctio quod aliquid officiis animi expedita vero! Omnis
-              doloremque sunt reiciendis voluptates ipsum!
-            </div>
-            <div class="amenities">
-              <h2>Amenities</h2>
-              <ul>
-                <li><i class="fa fa-tv"></i> TV</li>
-                <li><i class="fa fa-wifi"></i> Wifi</li>
-                <li><i class="fa fa-paw"></i> Pets friendly</li>
-              </ul>
-            </div>
-            <div class="reviews">
-              <h2>2 Reviews</h2>
-              <ul>
-                <li>
-                  <h3>From Bob Dylan the 27th January 2017</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Accusantium commodi cupiditate blanditiis repellat
-                    voluptatibus dicta quaerat eligendi nesciunt harum, quia hic
-                    doloremque neque maxime ratione ab architecto odit, tempora
-                    quos.
-                  </p>
-                </li>
-                <li>
-                  <h3>From Freddie Mercury the 31th october 1987</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Nihil voluptatibus inventore sed cupiditate est minima quia
-                    et fuga sint rerum commodi ea aut quis consequuntur, ab
-                    numquam maxime hic omnis?
-                  </p>
-                </li>
-              </ul>
-            </div>
-          </article>
-          <article>
-            <h2>A Suite</h2>
-            <div class="price_by_night">
-              $180
-            </div>
-            <div class="information">
-              <div class="max_guest">
-                <div class="img1"></div>
-                <p>2 Guests</p>
-              </div>
-              <div class="number_rooms">
-                <div class="img2"></div>
-                <p>1 Bedroom</p>
-              </div>
-              <div class="number_bathrooms">
-                <div class="img3"></div>
-                <p>1 Bedroom</p>
-              </div>
-            </div>
-            <div class="user"><strong>Owner:</strong> Pepe</div>
-            <div class="description">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea
-              tenetur nihil corporis? A corrupti amet possimus obcaecati
-              veritatis commodi atque impedit libero, minus quos vitae itaque
-              corporis nisi non nulla!
-            </div>
-            <div class="amenities">
-              <h2>Amenities</h2>
-              <ul>
-                <li><i class="fa fa-tv"></i> TV</li>
-                <li><i class="fa fa-wifi"></i> Wifi</li>
-                <li><i class="fa fa-paw"></i> Pets friendly</li>
-              </ul>
-            </div>
-            <div class="reviews">
-              <h2>2 Reviews</h2>
-              <ul>
-                <li>
-                  <h3>From Bob Dylan the 27th January 2017</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Accusantium commodi cupiditate blanditiis repellat
-                    voluptatibus dicta quaerat eligendi nesciunt harum, quia hic
-                    doloremque neque maxime ratione ab architecto odit, tempora
-                    quos.
-                  </p>
-                </li>
-                <li>
-                  <h3>From Freddie Mercury the 31th october 1987</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Nihil voluptatibus inventore sed cupiditate est minima quia
-                    et fuga sint rerum commodi ea aut quis consequuntur, ab
-                    numquam maxime hic omnis?
-                  </p>
-                </li>
-              </ul>
-            </div>
-          </article>
-        </div>
-      </section>
+        <article><!-- My home -->
+          <div class="article_places_header">
+            <h2>My home</h2>
+            <div class="price_by_night">$80</div>
+          </div>
+          <div class="information">
+            <div class="max_guest">2 Guests</div>
+            <div class="number_rooms">1 Bedroom</div>
+            <div class="number_bathrooms">1 Bathroom</div>
+          </div><!-- end information -->
+          <div class="user">
+            <p><b>Owner:</b> John Lennon</p>
+          </div><!-- end user -->
+          <div class="description">
+            <p>This is a lovely 1 bathroom apartament that can accommodate 2 people. It locates at the center of Shanghai and next to subway line 1, 1 stop to People Square, 2 stops to Bund, 3 stops to Jungan Temle.</p>
+          </div><!-- end description -->
+          <div class="amenities">
+            <h2>Amenities</h2>
+            <ul>
+              <li>
+                <div class="places_amenities_pet_friendly"></div>
+                Pet friendly
+            </li>
+              <li>
+                <div class="places_amenities_tv"></div>
+                Tv
+            </li>
+              <li>
+                <div class="places_amenities_wifi"></div>
+                Wifi
+            </li>
+            </ul>
+          </div>
+          <div class="reviews">
+            <h2>2 Reviews</h2>
+            <ul>
+              <li>
+                <h3>From Bob Dylan the 27th August 2022</h3>
+                <p>Runshi is an epic host. Nothing more i can say. 5 star!</p>
+              </li>
+              <li>
+                <h3>From Connor 4th August 2022</h3>
+                <p>Higly recommended!</p>
+              </li>
+            </ul>
+          </div>
+        </article><!-- end My home -->
+
+        <article>
+          <h2>Tiny house</h2>
+          <div class="price_by_night">$65</div>
+          <div class="information">
+            <div class="max_guest">4 Guests</div>
+            <div class="number_rooms">2 Bedrooms</div>
+            <div class="number_bathrooms">1 Bathroom</div>
+          </div><!-- end information -->
+          <div class="user">
+            <p><b>Owner:</b> Addrienne</p>
+          </div><!-- end user -->
+          <div class="description">
+            <p>Our place is a privete, afffordable satan-alone guest house centrally located just minutes to French Quarters, downtown th Fair Grounds (Jazz Fest) and City Park. The guest house is a quaint, 400 suare ft. with a full bath, mini kitchen, & livin room. The extra high cellings make the home feel more spacious. The sofa converts to bed also. We have a hand made counter area that adds character to the room and a great porch/deck to relax on and have a glass of Merlot.</p>
+          </div><!-- end description -->
+          <div class="amenities">
+            <h2>Amenities</h2>
+            <ul>
+              <li>
+                <div class="places_amenities_pet_friendly"></div>
+                Pet friendly
+            </li>
+            </ul>
+          </div>
+          <div class="reviews">
+            <h2>1 Review</h2>
+            <ul>
+              <li>
+                <h3>From Max the 15th August 2022</h3>
+                <p>Runshi is an epic host. Nothing more i can say. 5 star!</p>
+              </li>
+              <li>
+                <h3>From Connor 4th August 2022</h3>
+                <p>Higly recommended!</p>
+              </li>
+            </ul>
+          </div>
+        </article>
+        <article>
+          <h2>A suite</h2>
+          <div class="price_by_night">$190</div>
+          <div class="information">
+            <div class="max_guest">5 Guests</div>
+            <div class="number_rooms">3 Bedroom</div>
+            <div class="number_bathrooms">2 Bathroom</div>
+          </div><!-- end information -->
+          <div class="user">
+            <p><b>Owner:</b> Mick Jagger</p>
+          </div><!-- end user -->
+          <div class="description">
+            <p>First loft built by Holbies. It contains a decked terrace, jacuzzi, firepit, rabbits garden, two rooms, two balconies, entrance gate, private garden, private parking, BBQ area, AC in each bedroom, technological equipment, luxury beds, and mountain views. Ideal for architecture lovers, romantic dates, or having a good time. It is a unique space of his kind. Only pets that do not harm rabbits are allowed.</p>
+          </div><!-- end description -->
+          <div class="amenities">
+            <h2>Amenities</h2>
+            <ul>
+              <li>
+                <div class="places_amenities_pet_friendly"></div>
+                Pet friendly
+            </li>
+              <li>
+                <div class="places_amenities_tv"></div>
+                Tv
+            </li>
+              <li>
+                <div class="places_amenities_wifi"></div>
+                Wifi
+            </li>
+            </ul>
+          </div>
+          <div class="reviews">
+            <h2>1 Review</h2>
+            <ul>
+              <li>
+                <h3>From Gary Moore the 13th August 2022</h3>
+                <p>I love this place. Amazing!</p>
+              </li>
+            </ul>
+          </div>
+        </article>
+        </section> <!-- end section -->
     </div>
     <footer>
-      Best School
+      <p>Best School</p>
     </footer>
   </body>
 </html>
