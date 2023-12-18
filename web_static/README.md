@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-web_static
-=======
 # AirBnB Clone - Web Static
 
 ## Project Overview
