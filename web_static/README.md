@@ -2,7 +2,9 @@
 
 ## Project Overview
 
-This project focuses on building the front end of an AirBnB clone step-by-step. The goal is to design, prototype, and implement various elements using HTML and CSS. Each task involves creating static HTML pages, styling guides, and adding fake contents without using JavaScript or loading data from external sources.
+- This project focuses on building the front end of an AirBnB clone step-by-step. 
+- The goal is to design, prototype, and implement various elements using HTML and CSS. 
+- Each task involves creating static HTML pages, styling guides, and adding fake contents without using JavaScript or loading data from external sources.
 
 ## Learning Objectives
 
